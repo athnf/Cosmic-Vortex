@@ -52,7 +52,7 @@ Game ini diprogram oleh **Athaillah Nazhif Firdaus**.
 Kami sangat menyambut kontribusi dari Anda! Jika Anda ingin berkontribusi, silakan fork repositori ini dan buat pull request. Anda juga bisa membuka issue untuk melaporkan bug atau meminta fitur baru.
 
 ## 📞 Kontak
-Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi kami di [email@example.com](mailto:email@example.com).
+Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi kami di [azhif.firdaus25@gmail.com](mailto:azhif.firdaus25@gmail.com).
 
 ---
 
