@@ -21,7 +21,7 @@
 3. Tembak UFO yang muncul dari atas layar untuk mendapatkan poin!
 
 ## 📷 Contoh Gameplay
-![Gameplay](path/to/your/screenshot.png)
+![Gameplay](image.png)
 
 ## 📦 Cara Pemasangan dan Menjalankan
 1. Clone repositori ini:
