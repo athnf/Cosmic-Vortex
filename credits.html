@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Coolvetica', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .credits {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .credit-button {
+            background-color: #ff4500;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .credit-button:hover {
+            background-color: #ff5722;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            }
+            100% {
+                text-shadow: 4px 4px 8px rgba(255, 69, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Credits</h1>
+    <div class="credits">
+        <p>Game created by:</p>
+        <ul>
+            <li>Athaillah Nazhif Firdaus - Programmer</li>
+            <li>Athaillah Nazhif Firdaus - UI/UX Designer</li>
+            <li>Nashwa Ayesha - Graphic Designer</li>
+            <li>Abigail Makfira Bugis Syah - Sound Composer</li>
+            <li>Muhammad Fathir Albanny - Sound Composer</li>
+        </ul>
+        <p>Language used: HTML, CSS, JavaScript</p>
+        <p>Assets credits:</p>
+        <ul>
+            <li>Background image: https://unsplash.com/s/photos/black-space</li>
+            <!-- Tambahkan baris seperti di atas untuk setiap aset -->
+        </ul>
+    </div>
+    <button class="credit-button" onclick="goBack()"><i class="fas fa-arrow-left mr-2"></i> Back to Home</button>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

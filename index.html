@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Vortex</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Coolvetica', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .play-button,
+        .credit-button {
+            background-color: #ff4500;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button:hover,
+        .credit-button:hover {
+            background-color: #ff5722;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            }
+            100% {
+                text-shadow: 4px 4px 8px rgba(255, 69, 0, 0.8);
+            }
+        }
+
+        /* CSS untuk pemutar musik */
+        #musicPlayer {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Cosmic Vortex</h1>
+    <button class="play-button" onclick="playGame()"><i class="fas fa-play mr-2"></i> Play</button>
+    <button class="credit-button" onclick="showCredits()"><i class="fas fa-info-circle mr-2"></i> Credits</button>
+
+    <div id="musicPlayer">
+        <i id="playPauseBtn" class="fas fa-play"></i>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="sound/bs.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playGame() {
+            window.location.href = 'game.html';
+        }
+
+        function showCredits() {
+            window.location.href = 'credits.html';
+        }
+
+        const bgMusic = document.getElementById('bgMusic');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+
+        // Fungsi untuk memutar atau menghentikan musik
+        function toggleMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                playPauseBtn.classList.remove('fa-play');
+                playPauseBtn.classList.add('fa-pause');
+            } else {
+                bgMusic.pause();
+                playPauseBtn.classList.remove('fa-pause');
+                playPauseBtn.classList.add('fa-play');
+            }
+        }
+
+        // Toggle musik saat tombol di klik
+        playPauseBtn.addEventListener('click', toggleMusic);
+    </script>
+</body>
+</html>

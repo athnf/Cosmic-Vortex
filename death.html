@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/coolvetica" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Coolvetica', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .play-again-button {
+            background-color: #ff4500;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-again-button:hover {
+            background-color: #ff5722;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            }
+            100% {
+                text-shadow: 4px 4px 8px rgba(255, 69, 0, 0.8);
+            }
+        }
+
+        .try-again-button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"><i class="fas fa-skull-crossbones text-red-500 mr-4"></i> Game Over</h1>
+        <p class="subtitle">Your spaceship was destroyed!</p>
+        <button class="play-again-button" onclick="tryAgain()"><i class="fas fa-redo-alt mr-2"></i> Try Again</button>
+    </div>
+
+    <script>
+        function tryAgain() {
+            window.location.href = 'index.html'; // Ganti 'index.html' dengan nama file home screen
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
